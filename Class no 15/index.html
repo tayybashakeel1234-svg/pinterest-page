@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pinterest Box</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.pinterest-section {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.pinterest-section h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pinterest-section h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+
+}
+
+.card {
+    height: 180px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    /* flex-wrap: wrap; */
+
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.582);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card :hover::after {
+    opacity: 1;
+}
+
+.card span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.category-grid :hover {
+    background-color: black;
+    opacity: 0.7;
+}
+
+
+/* .card :hover {
+     background-color: black;
+} */
+
+@media (max-width:800px) {
+    .pinterest-section {
+        background-color: black;
+        color: white;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+    <!-- Key Frame, Animation, Transform -->
+    <!-- Circle, Square  -->
+    <!-- CSS Media Queries is important -->
+    <!-- Responsive, (Mobile, Desktop, Large) -->
+     <!-- image ko fit karnay kay liye object-fit or cover use kar saktay hai -->
+    <!-- em , rem, px, %, 1fr -->
+     <!-- px main chezain fix rahti hain but % main according to screen wo change hoti rahti hain -->
+    <!-- em and rem accoring to browser setting font size change kar daita hai  -->
+     <!-- 1rem is equal to 16px (by-default) -->
+<!-- next class task -->
+     <!-- calc() , Box (2 column in mobile screen) , Key-Frame , Media query (and) ,  -->
+
+
+ <section class="pinterest-section">
+        <h1> <b> Explore the best of Pinterest </b> </h1>
+        <br>
+        <h2> <b> Browse by category </b> </h2>
+
+        <div class="category-grid">
+
+            <div class="card" style="background-image: url(./box\ no\ 1.jfif);">
+                <span>Animals</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Box\ no\ 2.jfif');">
+                <span>Art</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Box\ no\ 3.jfif');">
+                <span>Beauty</span>
+            </div>
+
+            <div class="card" style="background-image: url(./Box\ no\ 4.png);">
+                <span>Design</span>
+            </div>
+
+            <div class="card" style="background-image: url(./Box\ no\ 5.jfif);">
+                <span>DIY And Crafts</span>
+            </div>
+
+            <div class="card" style="background-image: url(./box\ no\ 6.jfif);">
+                <span>Food And Drink</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Home\ Decor.jfif');">
+                <span>Home Decor</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Men\'s\ Fashion.jfif');">
+                <span>Men's Fashion</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Quotes.jfif');">
+                <span>Quotes</span>
+            </div>
+
+            <div class="card" style="background-image: url(./Tattoos.jfif);">
+                <span>Tattoos</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Travel.jfif');">
+                <span>Travel</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Weddings.jfif');">
+                <span>Weddings</span>
+            </div>
+
+            <div class="card" style="background-image: url('./Women\'s\ Fashion.jfif');">
+                <span>Women's Fashion</span>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+
